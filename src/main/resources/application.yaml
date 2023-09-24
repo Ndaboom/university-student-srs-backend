@@ -1,4 +1,5 @@
 spring:
+  main.allow-circular-references: true
   datasource:
     url: jdbc:mysql://localhost:8889/university_db?useSSL=false
     username: root
@@ -6,4 +7,8 @@ spring:
 
   #JPA Settings
   jpa.hibernate.ddl_auto: update
-  #jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQLDialect
+  # Filters chain
+  security:
+    filter:
+      order=10:
+
