@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface StudentRepository extends JpaRepository<Students, String> {
-    // Return vendors by name
-    List<Students> findByVendorName(String studentName);
+    // Return student by name
+    List<Students> findByStudentName(String studentName);
 }

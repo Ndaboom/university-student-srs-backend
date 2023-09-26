@@ -1,7 +1,6 @@
 package com.cyberclick.universityStudentSrsBackend.service.impl;
 
 import com.cyberclick.universityStudentSrsBackend.entity.Students;
-import com.cyberclick.universityStudentSrsBackend.exception.CustomException;
 import com.cyberclick.universityStudentSrsBackend.exception.CustomNotFoundException;
 import com.cyberclick.universityStudentSrsBackend.repository.StudentRepository;
 import com.cyberclick.universityStudentSrsBackend.service.StudentService;
@@ -51,6 +50,6 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Students> getByStudentName(String studentName) {
-        return studentRepository.findByVendorName(studentName);
+        return studentRepository.findByStudentName(studentName);
     }
 }
