@@ -5,6 +5,7 @@ import com.cyberclick.universityStudentSrsBackend.response.ResponseHandler;
 import com.cyberclick.universityStudentSrsBackend.service.StudentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = "http://localhost:5173/", maxAge = 3600)
@@ -22,6 +23,7 @@ public class StudentController {
     }
 
     @GetMapping()
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public ResponseEntity<Object> getAllStudents(){
         return ResponseHandler.responseBuilder("Students list", HttpStatus.OK, studentService.getAllStudents());
     }
