@@ -24,13 +24,6 @@ public class Schools {
     @Column(name = "createdAt")
     private Date createdAt;
 
-    public Schools(int id, String schoolName, String schoolDescription, Date createdAt) {
-        this.id = id;
-        this.schoolName = schoolName;
-        this.schoolDescription = schoolDescription;
-        this.createdAt = createdAt;
-    }
-
     public int getId() {
         return id;
     }
