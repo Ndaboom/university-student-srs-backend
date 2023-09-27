@@ -11,7 +11,7 @@ public interface StudentService {
 
     public String deleteStudent(String student);
 
-    Students student(String studentId);
+    Students getStudent(String studentId);
 
     public List<Students> getAllStudents();
 
