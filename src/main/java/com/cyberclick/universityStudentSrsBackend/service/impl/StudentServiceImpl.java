@@ -4,9 +4,11 @@ import com.cyberclick.universityStudentSrsBackend.entity.Students;
 import com.cyberclick.universityStudentSrsBackend.exception.CustomNotFoundException;
 import com.cyberclick.universityStudentSrsBackend.repository.StudentRepository;
 import com.cyberclick.universityStudentSrsBackend.service.StudentService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class StudentServiceImpl implements StudentService {
 
     StudentRepository studentRepository;
@@ -37,7 +39,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Students student(String studentId) {
+    public Students getStudent(String studentId) {
         if(studentRepository.findById(studentId).isEmpty())
             throw new CustomNotFoundException("Requested student does not exist");
         return studentRepository.findById(studentId).get();
