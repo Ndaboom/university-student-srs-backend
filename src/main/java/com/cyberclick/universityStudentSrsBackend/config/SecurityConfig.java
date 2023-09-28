@@ -50,6 +50,8 @@ public class SecurityConfig {
                 .and()
                 .authorizeHttpRequests().requestMatchers("/schools").authenticated()
                 .and()
+                .authorizeHttpRequests().requestMatchers("/departments").authenticated()
+                .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
