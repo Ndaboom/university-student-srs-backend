@@ -1,7 +1,6 @@
 package com.cyberclick.universityStudentSrsBackend.controller;
 
 import com.cyberclick.universityStudentSrsBackend.entity.Schools;
-import com.cyberclick.universityStudentSrsBackend.entity.Students;
 import com.cyberclick.universityStudentSrsBackend.response.ResponseHandler;
 import com.cyberclick.universityStudentSrsBackend.service.SchoolService;
 import org.springframework.http.HttpStatus;
