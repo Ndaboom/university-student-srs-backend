@@ -30,9 +30,9 @@ public class SchoolServiceImpl implements SchoolService {
     }
 
     @Override
-    public String deleteSchool(String school) {
-        if(schoolRepository.existsById(school)) {
-            schoolRepository.deleteById(school);
+    public String deleteSchool(String schoolId) {
+        if(schoolRepository.existsById(schoolId)) {
+            schoolRepository.deleteById(schoolId);
             return "Record deleted successfully";
         } else{
             throw new CustomNotFoundException("Requested school does not exist");
