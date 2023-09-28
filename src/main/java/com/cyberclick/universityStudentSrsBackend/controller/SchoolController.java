@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:5173/", maxAge = 3600)
+@CrossOrigin
 @RestController
 @RequestMapping("/schools")
 public class SchoolController {
