@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
 
@@ -18,25 +19,22 @@ public class Students {
     private int id;
     private String studentId;
     private String userId;
-    private String studentName;
+    private String studentFirstName;
+    private String studentLastName;
     private String studentEmail;
-
+    private String studentPhoneNumber;
+    private String studentAddress;
+    private String studentClass;
+    private String studentSchoolId;
+    private String studentDepartmentId;
+    private String parentsName;
     @Temporal(TemporalType.DATE)
     @Column(name = "dateOfBirth")
     private Date dateOfBirth;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "enrollmentDate")
+    @CreationTimestamp
+    @Column(name = "enrollment_date")
     private Date enrollmentDate;
-
-    public Students(String studentId, String userId, String studentName, String studentEmail, Date dateOfBirth, Date enrollmentDate) {
-        this.studentId = studentId;
-        this.userId = userId;
-        this.studentName = studentName;
-        this.studentEmail = studentEmail;
-        this.dateOfBirth = dateOfBirth;
-        this.enrollmentDate = enrollmentDate;
-    }
 
     public int getId() {
         return id;
@@ -62,12 +60,20 @@ public class Students {
         this.userId = userId;
     }
 
-    public String getStudentName() {
-        return studentName;
+    public String getStudentFirstName() {
+        return studentFirstName;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setStudentFirstName(String studentFirstName) {
+        this.studentFirstName = studentFirstName;
+    }
+
+    public String getStudentLastName() {
+        return studentLastName;
+    }
+
+    public void setStudentLastName(String studentLastName) {
+        this.studentLastName = studentLastName;
     }
 
     public String getStudentEmail() {
@@ -76,6 +82,54 @@ public class Students {
 
     public void setStudentEmail(String studentEmail) {
         this.studentEmail = studentEmail;
+    }
+
+    public String getStudentPhoneNumber() {
+        return studentPhoneNumber;
+    }
+
+    public void setStudentPhoneNumber(String studentPhoneNumber) {
+        this.studentPhoneNumber = studentPhoneNumber;
+    }
+
+    public String getStudentAddress() {
+        return studentAddress;
+    }
+
+    public void setStudentAddress(String studentAddress) {
+        this.studentAddress = studentAddress;
+    }
+
+    public String getStudentClass() {
+        return studentClass;
+    }
+
+    public void setStudentClass(String studentClass) {
+        this.studentClass = studentClass;
+    }
+
+    public String getStudentSchoolId() {
+        return studentSchoolId;
+    }
+
+    public void setStudentSchoolId(String studentSchoolId) {
+        this.studentSchoolId = studentSchoolId;
+    }
+
+    public String getStudentDepartmentId() {
+        return studentDepartmentId;
+    }
+
+    public void setStudentDepartmentId(String studentDepartmentId) {
+        this.studentDepartmentId = studentDepartmentId;
+    }
+
+    public String getParentsName() {
+        return parentsName;
+    }
+
+    public void setParentsName(String parentsName) {
+        this.parentsName = parentsName;
     }
 
     public Date getDateOfBirth() {
@@ -93,4 +147,5 @@ public class Students {
     public void setEnrollmentDate(Date enrollmentDate) {
         this.enrollmentDate = enrollmentDate;
     }
+
 }

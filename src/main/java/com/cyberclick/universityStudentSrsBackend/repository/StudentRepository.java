@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface StudentRepository extends JpaRepository<Students, String> {
     // Return student by name
-    List<Students> findByStudentName(String studentName);
+    List<Students> findByStudentFirstName(String studentFirstName);
 }
