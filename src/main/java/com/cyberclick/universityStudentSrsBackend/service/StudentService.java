@@ -15,5 +15,5 @@ public interface StudentService {
 
     public List<Students> getAllStudents();
 
-    List<Students> getByStudentName(String studentName);
+    List<Students> getByStudentFirstName(String studentFirstName);
 }
