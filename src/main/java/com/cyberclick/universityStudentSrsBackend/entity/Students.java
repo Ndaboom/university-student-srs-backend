@@ -28,13 +28,30 @@ public class Students {
     private String studentSchoolId;
     private String studentDepartmentId;
     private String parentsName;
+    @Lob
+    private byte[] studentImage;
     @Temporal(TemporalType.DATE)
     @Column(name = "dateOfBirth")
     private Date dateOfBirth;
-
+    private String placeOfBirth;
     @CreationTimestamp
     @Column(name = "enrollment_date")
     private Date enrollmentDate;
+    public byte[] getStudentImage() {
+        return studentImage;
+    }
+
+    public void setStudentImage(byte[] studentImage) {
+        this.studentImage = studentImage;
+    }
+
+    public String getPlaceOfBirth() {
+        return placeOfBirth;
+    }
+
+    public void setPlaceOfBirth(String placeOfBirth) {
+        this.placeOfBirth = placeOfBirth;
+    }
 
     public int getId() {
         return id;
